@@ -1,0 +1,6 @@
+# Add everything to gitignore
+*
+# Then un-ignore the specific files you want
+!liveanswer.py
+!main.py
+!.gitignore
