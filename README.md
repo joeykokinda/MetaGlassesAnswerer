@@ -1,4 +1,4 @@
-# LiveAnswer
+# LiveAnswer (For Meta Glasses)
 
 **LiveAnswer** is an automation tool that enhances real-time quiz answering during Instagram live streams. Designed for seamless integration with Meta Glasses, this bot uses **Selenium WebDriver**, **Pillow**, and the **OpenAI API** to automate login, navigation, screen capturing, quiz answering, and commenting in real-time.
 
