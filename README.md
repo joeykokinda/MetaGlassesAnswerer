@@ -1,24 +1,24 @@
-# MetaGlassesAnswerer 🎯
+# MetaGlassesAnswerer 
 
-MetaGlassesAnswerer is a Python automation tool that answers real-time quiz questions during Instagram live streams using Meta Glasses. It uses Selenium, Pillow, and OpenAI to capture livestream screenshots, extract questions and answers, and auto-comment responses—all without human interaction.
+MetaGlassesAnswerer is a Python automation tool that answers real-time quiz questions utlizing the Instagram live stream feature using Meta Glasses. It uses Selenium, Pillow, and OpenAI to capture livestream screenshots, extract questions and answers, and auto-comment responses—all without human interaction.
 
-🎥 **Demo Video:**  
+**Demo Video:**  
 Watch it in action: [https://www.youtube.com/watch?v=eCDWHQe8cE0&t=1s](https://www.youtube.com/watch?v=eCDWHQe8cE0&t=1s)
 
 ---
 
-## 🛠 Features
+## Features
 
-- 🔐 Automated Instagram login  
-- 🧠 AI-powered quiz answer detection via OpenAI API  
-- 💬 Auto-commenting extracted answers into the livestream  
-- 🔄 Periodic screenshotting every 15 seconds  
-- 🖱️ Single-click interaction to dismiss overlays  
-- 🧪 Headless automation using Selenium + Pillow
+- Automated Instagram login  
+- AI-powered quiz answer detection via OpenAI API  
+- uto-commenting extracted answers into the livestream  
+- Periodic screenshotting every 15 seconds  
+- Single-click interaction to dismiss overlays  
+- Headless automation using Selenium + Pillow
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone this repo**
    ```bash
@@ -55,10 +55,11 @@ Watch it in action: [https://www.youtube.com/watch?v=eCDWHQe8cE0&t=1s](https://w
 
 ---
 
-## 🖼 Example Output
+## Example Output
 
 **Input (Livestream Screenshot):**  
-*Sample image here if you have one*
+Point Your galsses at a multiple chocie quiz question
+<img width="597" height="550" alt="image" src="https://github.com/user-attachments/assets/f09c3ad1-f0ec-49d1-929b-b9cd2b1cf799" />
 
 **Output (Comments):**
 ```
@@ -69,28 +70,27 @@ Watch it in action: [https://www.youtube.com/watch?v=eCDWHQe8cE0&t=1s](https://w
 
 ---
 
-## ⚠️ Security Notice
+## Security Notice
 
-Use a throwaway or burner Instagram account. Do **not** use your personal credentials when automating login to third-party services.
-
----
-
-## ✅ TODO / Future Ideas
-
-- OCR tuning for blurry quiz feeds  
-- Add Twitch/YouTube livestream support  
-- Overlay viewer for real-time answer display  
-- Auto-region detection for livestream window  
+Use a throwaway or burner Instagram account. Do **not** use your personal credentials when automating login to third-party services. You can set up the livestream on your main account but the commenting one should be done with a burner.
 
 ---
 
-## 📄 License
+## Future Ideas (If you would Like to make a pull request feel free to do so)
+
+- Better input method, rather then taking screenshots at a certain time interval   
+- Auto-region detection for livestream window
+- Better way of sending photo (I have tried whatsapp and messagener but I have had no luck)
+
+---
+
+## License
 
 MIT License — free to use, fork, and modify.
 
 ---
 
-## 👥 Authors
+## Authors
 
 - Joey Kokinda  
 - Contributions welcome via pull requests
