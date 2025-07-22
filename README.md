@@ -1,80 +1,96 @@
-# LiveAnswer (For Meta Glasses)
+# MetaGlassesAnswerer 🎯
 
-**LiveAnswer** is an automation tool that enhances real-time quiz answering during Instagram live streams. Designed for seamless integration with Meta Glasses, this bot uses **Selenium WebDriver**, **Pillow**, and the **OpenAI API** to automate login, navigation, screen capturing, quiz answering, and commenting in real-time.
+MetaGlassesAnswerer is a Python automation tool that answers real-time quiz questions during Instagram live streams using Meta Glasses. It uses Selenium, Pillow, and OpenAI to capture livestream screenshots, extract questions and answers, and auto-comment responses—all without human interaction.
 
----
-
-## **How It Works**
-
-1. **Two Accounts Setup**:
-   - **Account 1**: Hosts the livestream. This account runs on your Meta Glasses, streaming the quiz.
-   - **Account 2**: Watches the livestream. This account runs the `liveanswer.py` script to capture the quiz, analyze it, and post answers automatically.
-
-2. **Automated Flow**:
-   - Logs into Instagram using your credentials.
-   - Navigates to the livestream URL.
-   - Clicks once on the screen to start the livestream.
-   - Captures screenshots of the livestream feed every 15 seconds after an initial 20-second delay.
-   - Sends the screenshot to the OpenAI API to detect quiz questions and answers.
-   - Posts the answers to the livestream as comments.
+🎥 **Demo Video:**  
+Watch it in action: [https://www.youtube.com/watch?v=eCDWHQe8cE0&t=1s](https://www.youtube.com/watch?v=eCDWHQe8cE0&t=1s)
 
 ---
 
-## **Features**
+## 🛠 Features
 
-- **Automated Login**: Logs into Instagram with pre-configured credentials.
-- **Quiz Answer Detection**: Processes livestream screenshots to extract quiz answers in the format `1A; 2B; 3C`.
-- **Automated Commenting**: Posts extracted answers directly to the livestream comments.
-- **Periodic Updates**: Captures and processes new images every 15 seconds.
-- **Simple Screen Interaction**: Dismisses livestream overlays with a single click.
-
----
-
-## **Prerequisites**
-
-1. **Python Environment**:
-   - Install Python 3.8+.
-   - Install the required dependencies:
-     ```bash
-     pip install selenium pillow requests
-     ```
-
-2. **Google Chrome**:
-   - Install Google Chrome.
-   - Download and install [Chromedriver](https://chromedriver.chromium.org/downloads) matching your Chrome version.
-
-3. **OpenAI API Key**:
-   - Get your API key from [OpenAI](https://platform.openai.com/signup/).
-   - Add it to the script in the `OPENAI_API_KEY` variable.
-
-4. **Instagram Accounts**:
-   - **Account 1**: Set up on your Meta Glasses to host the livestream.
-   - **Account 2**: Used to run the script and post answers.
+- 🔐 Automated Instagram login  
+- 🧠 AI-powered quiz answer detection via OpenAI API  
+- 💬 Auto-commenting extracted answers into the livestream  
+- 🔄 Periodic screenshotting every 15 seconds  
+- 🖱️ Single-click interaction to dismiss overlays  
+- 🧪 Headless automation using Selenium + Pillow
 
 ---
 
-## **Configuration**
+## 🚀 Getting Started
 
-1. **Update Credentials**:
-   - Replace placeholders in `liveanswer.py`:
-     ```python
-     INSTAGRAM_USERNAME = "your-email@example.com"
-     INSTAGRAM_PASSWORD = "your-password"
-     OPENAI_API_KEY = "your-openai-api-key"
-     CHROMEDRIVER_PATH = "C:/path/to/chromedriver.exe"
-     ```
+1. **Clone this repo**
+   ```bash
+   git clone https://github.com/joeykokinda/MetaGlassesAnswerer.git
+   cd MetaGlassesAnswerer
+   ```
 
-2. **Adjust Livestream Region**:
-   - Update the `livestream_region` in the script to match the screen coordinates of your livestream on your device:
-     ```python
-     livestream_region = (100, 100, 800, 1080)
-     ```
+2. **Install Python dependencies**
+   ```bash
+   pip install selenium pillow requests
+   ```
 
----
+3. **Install Google Chrome and ChromeDriver**
+   - [Download ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) matching your Chrome version.
+   - Place it somewhere accessible and copy the path.
 
-## **Usage**
+4. **Update credentials in `liveanswer.py`**
+   ```python
+   INSTAGRAM_USERNAME = "your-email@example.com"
+   INSTAGRAM_PASSWORD = "your-password"
+   OPENAI_API_KEY = "your-openai-api-key"
+   CHROMEDRIVER_PATH = "C:/path/to/chromedriver.exe"
+   livestream_region = (100, 100, 800, 1080)  # Adjust for your screen
+   ```
 
-1. Start the livestream on **Account 1** (Meta Glasses).
-2. Run the `liveanswer.py` script for **Account 2**:
+5. **Start the livestream**
+   - Account 1 (on Meta Glasses) should start the quiz livestream.
+   - Account 2 runs the script and answers in real time.
+
+6. **Run the bot**
    ```bash
    python liveanswer.py
+   ```
+
+---
+
+## 🖼 Example Output
+
+**Input (Livestream Screenshot):**  
+*Sample image here if you have one*
+
+**Output (Comments):**
+```
+1A  
+2C  
+3B  
+```
+
+---
+
+## ⚠️ Security Notice
+
+Use a throwaway or burner Instagram account. Do **not** use your personal credentials when automating login to third-party services.
+
+---
+
+## ✅ TODO / Future Ideas
+
+- OCR tuning for blurry quiz feeds  
+- Add Twitch/YouTube livestream support  
+- Overlay viewer for real-time answer display  
+- Auto-region detection for livestream window  
+
+---
+
+## 📄 License
+
+MIT License — free to use, fork, and modify.
+
+---
+
+## 👥 Authors
+
+- Joey Kokinda  
+- Contributions welcome via pull requests
