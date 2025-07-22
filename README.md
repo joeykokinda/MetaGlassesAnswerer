@@ -45,8 +45,8 @@ Watch it in action: [https://www.youtube.com/watch?v=eCDWHQe8cE0&t=1s](https://w
    ```
 
 5. **Start the livestream**
-   - Account 1 (on Meta Glasses) should start the quiz livestream.
-   - Account 2 runs the script and answers in real time.
+   - Account 1 (on Meta Glasses) should start the quiz livestream. (THIS CAN BE YOUR MAIN ACCOUTN OR A SECOND BURNER, THIS IS NOT THE ONE YOU PROVIDED IN THE FILE, THIS SHOULD BE A NEW ANOTHER ACCOUNT)
+   - Account 2 runs the script and answers in real time. (THe one you put in the file)
 
 6. **Run the bot**
    ```bash
