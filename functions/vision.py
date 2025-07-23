@@ -1,7 +1,7 @@
 # vision.py
 
 import requests
-from config import OPENAI_API_KEY
+from functions.config import OPENAI_API_KEY
 
 def process_image_with_openai(image_base64: str, prompt: str) -> str:
     headers = {

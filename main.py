@@ -2,14 +2,15 @@
 
 import time
 import argparse
-from functions import (
+# Corrected imports
+from functions.config import (
     CHROMEDRIVER_PATH, LIVESTREAM_URL, LIVESTREAM_REGION,
     DEFAULT_PROMPT, CAPTURE_INTERVAL, COOLDOWN_AFTER_REPEAT
 )
-from functions import init_driver, login, start_livestream, post_comment
-from functions import capture_screen
-from utils import read_image_as_base64, log_quiz_result
-from functions import process_image_with_openai
+from functions.instagram import init_driver, login, start_livestream, post_comment
+from functions.capture import capture_screen
+from functions.vision import process_image_with_openai
+from utils.utils import read_image_as_base64, log_quiz_result
 
 def main(prompt_override=None):
     prompt = prompt_override if prompt_override else DEFAULT_PROMPT

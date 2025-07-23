@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from config import INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD
+from functions.config import INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD
 
 def init_driver(chromedriver_path: str):
     service = Service(chromedriver_path)
@@ -20,9 +20,9 @@ def login(driver):
         driver.find_element(By.NAME, "username").send_keys(INSTAGRAM_USERNAME)
         driver.find_element(By.NAME, "password").send_keys(INSTAGRAM_PASSWORD + Keys.RETURN)
         time.sleep(5)
-        print("✅ Logged into Instagram.")
+        print("Logged into Instagram.")
     except Exception as e:
-        print("❌ Login failed:", e)
+        print("Login failed:", e)
         raise
 
 def start_livestream(driver, livestream_url):
@@ -30,9 +30,9 @@ def start_livestream(driver, livestream_url):
     time.sleep(5)
     try:
         driver.find_element(By.TAG_NAME, "body").click()
-        print("🖱️ Clicked screen to activate stream.")
+        print("Clicked screen to activate stream.")
     except Exception as e:
-        print("❌ Click failed:", e)
+        print("Click failed:", e)
     time.sleep(20)
 
 def post_comment(driver, comment: str):

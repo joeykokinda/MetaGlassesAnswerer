@@ -2,7 +2,7 @@
 import base64
 import os
 from datetime import datetime
-from config import LOG_PATH
+from functions.config import LOG_PATH
 
 def read_image_as_base64(path: str) -> str:
     with open(path, "rb") as f:
