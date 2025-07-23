@@ -11,7 +11,7 @@ def capture_screen(region=None) -> str:
         screenshot.save(image_path)
         return image_path
     except Exception as e:
-        print("❌ Error capturing screen:", e)
+        print("Error capturing screen:", e)
         raise
 
 def encode_image_to_base64(image_path: str) -> str:
@@ -19,5 +19,5 @@ def encode_image_to_base64(image_path: str) -> str:
         with open(image_path, "rb") as f:
             return f.read().encode("base64").decode("utf-8")
     except Exception as e:
-        print("❌ Error encoding image:", e)
+        print("Error encoding image:", e)
         raise

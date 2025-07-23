@@ -26,5 +26,5 @@ def process_image_with_openai(image_base64: str, prompt: str) -> str:
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"].strip()
     except Exception as e:
-        print("❌ Error processing image with OpenAI:", e)
+        print("Error processing image with OpenAI:", e)
         raise

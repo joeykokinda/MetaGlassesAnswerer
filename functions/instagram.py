@@ -42,6 +42,6 @@ def post_comment(driver, comment: str):
         comment_box.send_keys(comment)
         time.sleep(1)
         comment_box.send_keys(Keys.RETURN)
-        print("💬 Commented:", comment)
+        print("Commented:", comment)
     except Exception as e:
-        print("❌ Failed to post comment:", e)
+        print("Failed to post comment:", e)
