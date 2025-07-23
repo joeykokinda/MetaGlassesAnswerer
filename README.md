@@ -110,3 +110,6 @@ MIT License — free to use, fork, and modify.
 
 - Joey Kokinda  
 - Contributions welcome via pull requests
+
+
+  IF NEWLY FORMATTED CODE DOESNT WORK FOR YOU, USE THE OLD BRANCH
