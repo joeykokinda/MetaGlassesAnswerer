@@ -45,3 +45,18 @@ def post_comment(driver, comment: str):
         print("Commented:", comment)
     except Exception as e:
         print("Failed to post comment:", e)
+
+def logout(driver):
+    try:
+        driver.get("https://www.instagram.com/accounts/logout/")
+        time.sleep(3)
+        print("Logged out of Instagram.")
+    except Exception as e:
+        print("Logout failed:", e)
+
+def take_screenshot(driver, filename="screenshot.png"):
+    try:
+        driver.save_screenshot(filename)
+        print(f"Screenshot saved as {filename}")
+    except Exception as e:
+        print("Failed to take screenshot:", e)
