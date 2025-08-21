@@ -45,3 +45,12 @@ def post_comment(driver, comment: str):
         print("Commented:", comment)
     except Exception as e:
         print("Failed to post comment:", e)
+
+def logout(driver):
+    try:
+        driver.get("https://www.instagram.com/accounts/logout/")
+        time.sleep(3)
+        print("Logged out of Instagram.")
+    except Exception as e:
+        print("Logout failed:", e)
+
