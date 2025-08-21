@@ -54,9 +54,3 @@ def logout(driver):
     except Exception as e:
         print("Logout failed:", e)
 
-def take_screenshot(driver, filename="screenshot.png"):
-    try:
-        driver.save_screenshot(filename)
-        print(f"Screenshot saved as {filename}")
-    except Exception as e:
-        print("Failed to take screenshot:", e)
