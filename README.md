@@ -16,6 +16,7 @@ Watch it in action: [https://www.youtube.com/watch?v=eCDWHQe8cE0&t=1s](https://w
 - Single-click interaction to dismiss overlays  
 - Modular structure with environment variable configuration  
 - Automatic answer logging with timestamps
+- Take screenshots
 
 ---
 
